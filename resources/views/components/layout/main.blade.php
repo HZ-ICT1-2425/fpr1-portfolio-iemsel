@@ -21,8 +21,8 @@
                    class="navbar-item {{ Request::route()->getName() === 'about' ? "active" : "" }}">
                     About
                     </a></li>
-                <li><a href="{{ route('faq') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'faq' ? "active" : "" }}">
+                <li><a href="{{ route('faq.index') }}"
+                   class="navbar-item {{ Request::route()->getName() === 'faq.index' ? "active" : "" }}">
                     FAQS
                     </a></li>
                 <li><a href="{{ route('dashboard') }}"
