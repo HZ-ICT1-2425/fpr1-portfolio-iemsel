@@ -88,4 +88,3 @@ class FAQController extends Controller
         return redirect()->route('faq.index');
     }
 }
-
