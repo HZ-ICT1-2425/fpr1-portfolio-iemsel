@@ -3,7 +3,7 @@
     <h1 class="center">Blogs</h1>
     <hr>
     <section class="starbg">
-        <a href="{{ url('blogs\study-choice') }}">
+        <a href="{{ url('blogs\slug\study-choice') }}">
             <section class="blog blog-text">
                 <h1>Study Choice</h1>
                 <p> Why i choose this study, I will talk about why I choose this study,
@@ -11,13 +11,13 @@
                 </p>
             </section>
         </a>
-        <a href="{{ url('blogs\programming-experience') }}">
+        <a href="{{ url('blogs\slug\programming-experience') }}">
             <section class="blog blog-text">
                 <h1>Programming Experience</h1>
                 <p> My previous programming experience will be discussed here.</p>
             </section>
         </a>
-        <a href="{{ url('blogs\swot') }}">
+        <a href="{{ url('blogs\slug\swot') }}">
             <section class="blog blog-text">
                 <h1>Personal SWOT Analysis</h1>
                 <p> Strengths Weakness Opportunity Threats analysis.
@@ -25,7 +25,7 @@
                 </p>
             </section>
         </a>
-        <a href="{{ url('blogs\first-feedback') }}">
+        <a href="{{ url('blogs\slug\first-feedback') }}">
             <section class="blog blog-text">
                 <h1>First Feedback</h1>
                 <p> How my feedback went, what i decided to do with the feedback
@@ -33,12 +33,16 @@
                 </p>
             </section>
         </a>
-        <a href="{{ url('blogs\ict-field') }}">
+        <a href="{{ url('blogs\slug\ict-field') }}">
             <section class="blog blog-text">
                 <h1>ICT field</h1>
                 <p> A article/blog about the ICT field.</p>
             </section>
         </a>
+        @foreach($blogs as $blog)
+            <x-blog.blog-item :blog="$blog"></x-blog.blog-item>
+        @endforeach
+            <a href="{{ route('blogs.create') }}" class="button is-primary center">Create a New Blog</a>
     </section>
     </body>
 </x-layout.main>

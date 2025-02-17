@@ -21,7 +21,7 @@ class FAQController extends Controller
     }
 
     /**
-     * Show the form for creating a new Task.
+     * Show the form for creating a new FAQ.
      */
     public function create()
     {

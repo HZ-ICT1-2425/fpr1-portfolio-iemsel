@@ -48,7 +48,7 @@
                 <a href="{{ route('faq.edit', $faq->id) }}" class="button is-primary">Edit</a>
 
                 <!-- Unique Delete Button -->
-                <button id="deleteBtn{{ $faq->id }}" class="button is-danger">Delete</button>
+                <button id="deleteBtn{{ $faq->id }}" class="button">Delete</button>
 
                 <!-- Unique Modal -->
                 <div id="deleteModal{{ $faq->id }}" class="modal">
