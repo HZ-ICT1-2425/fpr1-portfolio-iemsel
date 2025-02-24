@@ -1,138 +1,70 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<x-layout.main>
+    <main>
+        <aside>
+            <p style="text-align: center; font-weight: bold;">Important links</p>
+            <hr>
+            <ul class="side-menu">
+                <li><a href="https://portal.hz.nl/" target="_blank" rel="noopener noreferrer">MyHz</a></li>
+                <li><a href="https://apps.hz.nl/rooster/" target="_blank" rel="noopener noreferrer">Schedule</a></li>
+                <li><a href="https://learn.hz.nl/my/" target="_blank" rel="noopener noreferrer">LearnHz</a></li>
+                <li><a href="https://hz.osiris-student.nl/voortgang" target="_blank" rel="noopener noreferrer">Study progress</a>
+                </li>
+                <li><a href="https://oer.hz.nl/" target="_blank" rel="noopener noreferrer">Course and Examination Regulations</a>
+                </li>
+                <li><a href="https://oer.hz.nl/6978cdea-fb31-430b-9bf9-63206aa07754" target="_blank" rel="noopener noreferrer">IR
+                        HBO-ICT</a></li>
+                <li><a href="https://github.com/HZ-HBO-ICT" target="_blank" rel="noopener noreferrer">Github HZ HBO-ICT</a></li>
+            </ul>
+        </aside>
+        <article id="intro">
+            <h1>Why HBO-ICT is something for me</h1>
+            <p>I chose to study ICT because it connects with both my personal interests and my family background.
+                My dad works as a programmer at Dow in Terneuzen, and growing up,
+                I was always curious about the work he did with computers.
+                Seeing him solve problems and create solutions inspired me,
+                and I can easily see myself following a similar path.
+                His passion for programming, combined with how he handled challenges, really got me interested in ICT.
 
-    <title>HZ HBO-ICT</title>
+                At my previous school, I took a subject called "Informatica,"
+                which is similar to ICT but more focused. I enjoyed that subject a lot and was good at it,
+                which confirmed my interest in the field.
+                Learning about how computers work and figuring out ways to fix or improve systems was something that excited me.
+            </p>
+            <p>
+                I also gained some hands-on experience thanks to my older sister,
+                who got me a vacation job at her company. One of my tasks was building a website,
+                and I really enjoyed solving problems around the office.
+                Being able to fix issues and help others gave me a real sense of accomplishment.
+                The process of finding solutions and making things work is something I find very satisfying.
 
-    {{-- Compiled assets --}}
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-</head>
-<body>
-{{-- Navigation bar --}}
-<nav class="navbar is-primary  has-text-white" >
-    <div class="container">
-        <div class="navbar-brand">
-            <a href="/" class="navbar-item">
-                <strong><i class="fas fa-graduation-cap"></i> HZ</strong>
-            </a>
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-        <div class="navbar-menu" id="navMenu">
-            <div class="navbar-start">
-                <a href="{{ route('home') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'home' ? "is-active" : "" }}">
-                    Home
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
+                With these experiences and my growing interest in ICT, I believe HBO-ICT is the right path for me.
+                I enjoy the challenge of solving problems and learning new things, and I can see myself working in a job like my dad's,
+                where I can apply my skills to help others and create useful solutions.
+                Solving problems gives me a real sense of achievement, and that is why I am excited about pursuing a career in ICT.
+            </p>
+            <section class="flex">
+                <ul> Why did i choose for hz HBO-ICT in short
+                    <li>Close enough near my house so that I dont have to go in students rooms</li>
+                    <li>Multiple friends of mine choose for hz</li>
+                    <li>Intersing programm</li>
+                    <li>Because it has an international class</li>
+                </ul>
+                <img class="hz-logo" src="{{ asset('img/hz-logo.png') }}" alt="hz logo">
+            </section>
+            <h1>Informatica (from my old school)</h1>
+            <p>
+                For Informatica, I had to create a website at one point as well; this was two years ago.
+                When you compare this website to the one I built back then,
+                you will see a great difference, which shows my development.
+                The website is shown in the images below.
 
-{{-- Content --}}
-<section class="hero  is-medium  is-bold is-primary">
-    <div class="hero-body" style="
-            background: url('https://www.hz.nl/imager/uploads/images/3.-Werk-en-studie/Headers/docent-coacht-studenten-003_c8fa470484be7b69be5daae77a1602c5.jpg') no-repeat center center;
-            background-size: cover;"
-    ></div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div class="columns">
-
-            <div class="column is-8-desktop is-12-tablet">
-
-                <div class="content">
-                    <h1>Welcome to the HZ HBO-ICT template app.</h1>
-                    <p>
-                        Posuere porttitor natoque velit duis penatibus fermentum dignissim ut? Vel vel mi purus
-                        tempor nec conubia platea venenatis. Mauris pharetra auctor magnis, vehicula integer risus
-                        taciti gravida semper fames! Eu fermentum lorem accumsan litora. Consequat dapibus interdum
-                        primis lorem. Convallis integer mi suscipit tempor. Ad tincidunt placerat at. Sagittis
-                        pulvinar consectetur commodo, placerat varius sociosqu egestas felis! Curae; dictumst porta
-                        tempus. Nisi nec morbi netus euismod egestas proin sed tempor. Nam feugiat ante ante.
-                        Conubia vehicula tincidunt facilisis quisque risus senectus convallis. Eget at feugiat vel
-                        nisi. Tortor, facilisis neque elementum ultricies blandit amet orci dictumst eu mi molestie.
-                        Libero vulputate porta proin volutpat suspendisse aenean aenean facilisi ut primis!
-                        Venenatis elementum auctor neque urna et facilisis vulputate erat lorem habitasse libero!
-                        Risus ornare quam rutrum praesent blandit congue aliquet mauris.
-                    </p>
-                    <p>
-                        Elementum orci eget vel adipiscing tempor malesuada? Sollicitudin euismod nunc feugiat
-                        accumsan accumsan condimentum nulla pellentesque sagittis habitasse suspendisse praesent?
-                        Lectus proin justo vulputate tristique duis metus, est pellentesque blandit quam pharetra.
-                        Maecenas tincidunt litora mauris mollis ornare dictum nec placerat lectus massa lobortis
-                        auctor. Hac feugiat dolor, ac ridiculus mi adipiscing aptent elementum suspendisse augue
-                        rutrum! Habitasse a consequat ornare dictumst integer dis porta.
-                    </p>
-                    <p>
-                        Blandit mollis felis gravida sem ad venenatis ut a lacus! Magna odio netus, torquent rhoncus
-                        fames velit. Adipiscing libero, class cursus ipsum penatibus enim mollis netus. Sociis
-                        luctus eros sapien platea parturient fringilla. Senectus purus tincidunt laoreet purus
-                        praesent. Accumsan pulvinar tincidunt gravida malesuada senectus proin, elit cubilia
-                        lobortis quisque tellus? Torquent dis natoque sapien natoque sagittis conubia pulvinar risus
-                        elementum hac adipiscing arcu. Sem nisl fusce phasellus adipiscing pretium eget hendrerit
-                        proin non. Vestibulum lacus magna, commodo volutpat.
-                    </p>
-                    <p>
-                        Vivamus ridiculus amet arcu. Magnis venenatis vehicula venenatis molestie molestie proin sed
-                        blandit, inceptos volutpat. Auctor auctor massa sodales ipsum. Congue est quisque porta?
-                        Porta phasellus sem torquent ad feugiat sollicitudin nisi tempor tortor habitasse. Eros
-                        condimentum enim blandit pulvinar. Justo aenean, taciti curae; diam volutpat cubilia ante
-                        vestibulum. Augue penatibus phasellus inceptos tortor convallis ridiculus at ad. Nisl
-                        curabitur vel gravida, montes sit velit pellentesque. Sem, dapibus maecenas urna lectus
-                        mauris quisque nibh accumsan amet curabitur egestas dolor. Sagittis montes magnis quam
-                        fringilla accumsan bibendum. Nisl, a laoreet himenaeos sapien lorem quisque taciti lacus
-                        elit mauris. Mollis eleifend montes commodo? Accumsan nullam venenatis malesuada netus metus
-                        sociosqu magnis velit. Rhoncus lacus tempus praesent fermentum netus ullamcorper dolor
-                        integer nulla.
-                    </p>
-                    <p>
-                        Habitasse suspendisse egestas vestibulum pellentesque per leo enim metus donec ad. Hac metus
-                        convallis nibh eget, parturient dis elementum posuere. Felis, ultricies fusce est cubilia
-                        facilisis odio id velit dapibus suspendisse. Erat praesent nullam aliquam. Rutrum commodo
-                        eget malesuada per montes, curae; senectus convallis sociis per. Risus mattis justo vivamus
-                        lorem bibendum aenean eleifend facilisi, suscipit consectetur libero litora. Interdum?
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- Footer --}}
-<footer class="footer">
-    <div class="container">
-        <div class="columns is-multiline">
-
-            <div class="column has-text-centered">
-                <div>
-                    <a href="/" class="link">Home</a>
-                </div>
-            </div>
-
-            <div class="column has-text-centered">
-                <div>
-                    <a href="https://opensource.org/licenses/MIT" class="link">
-                        <i class="fa fa-balance-scale" aria-hidden="true"></i> License: MIT
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="content is-small has-text-centered">
-            <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a> | adapted by <a href="https://github.com/dwaard">BugSlayer</a></p>
-            <p>PROJECT FOOTER HERE</p>
-        </div>
-    </div>
-</footer>
-
-</body>
-</html>
+                The goal of that website was to display the upcoming weather, similar to "Buienradar."
+                It was a group project of two, where we divided the work: my partner would write the documents,
+                and I would create the website.
+                The website had both light and dark modes, and I designed it entirely on my own.
+            </p>
+            <img class="website-img" src="{{ asset('img/light-mode.png') }}" alt="Light-mode first website">
+            <img class="website-img" src="{{ asset('img/Dark-mode.png') }}" alt="Dark-mode first website">
+        </article>
+    </main>
+</x-layout.main>
