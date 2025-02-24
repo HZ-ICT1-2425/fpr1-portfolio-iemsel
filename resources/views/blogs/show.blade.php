@@ -50,7 +50,7 @@
             <hr>
             <article>
                 <h2>{{$blog ->slug}}</h2>
-                <p>{{$blog ->body}}</p>
+                <p>{!! $blog ->body !!}</p>
             </article>
             <div class="has-text-right is-flex is-flex-direction-column gap-2">
                 <a href="{{ route('blogs.edit', $blog->id) }}" class="button is-primary">Edit</a>
