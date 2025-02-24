@@ -40,6 +40,23 @@
             @enderror
         </div>
 
+        <div class="field">
+            <label for="link" class="label faq_title">link</label>
+            <div class="control has-icons-right">
+                <textarea name="link" id="link"
+                          class="textarea @error('link') is-danger @enderror"
+                          placeholder="Enter a FAQ link...">{{ old('link') }}</textarea>
+                @error('link')
+                <span class="icon has-text-danger is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </span>
+                @enderror
+            </div>
+            @error('link')
+            <p class="help is-danger">{{ $message }}</p>
+            @enderror
+        </div>
+
         <div class="field is-grouped is-grouped-centered">
             <div class="control is-flex is-flex-direction-column gap-2 has-text-centered">
                 <button type="submit" class="button is-primary">Save</button>

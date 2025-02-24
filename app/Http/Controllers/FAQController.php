@@ -48,12 +48,14 @@ class FAQController extends Controller
         $validated = $request->validate([
             'question' => 'required',
             'answer' => 'required',
+            'link' => 'nullable|url',
         ]);
 
         // Store FAQ
         $faq = Faq::create([
             'question' => $validated['question'],
             'answer' => $validated['answer'],
+            'link' => $validated['link'],
         ]);
 
         return redirect()->route('faq.index')->with('success', "FAQ #$faq->id created!");
@@ -69,7 +71,8 @@ class FAQController extends Controller
         // Validate the request
         $validated = $request->validate([
             'question' => 'required',
-            'answer' => 'required'
+            'answer' => 'required',
+            'link' => 'nullable|url',
         ]);
 
         $faq -> update($validated);

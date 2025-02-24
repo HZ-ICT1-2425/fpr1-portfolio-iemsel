@@ -44,6 +44,7 @@
         <summary class="faq_title">{{ $faq->question }}</summary>
         <div class="faq_content">
             <p>{{ $faq->answer }}</p>
+            <a href="{{$faq->link}}">link</a>
             <div class="has-text-right is-flex is-flex-direction-column gap-2">
                 <a href="{{ route('faq.edit', $faq->id) }}" class="button is-primary">Edit</a>
 

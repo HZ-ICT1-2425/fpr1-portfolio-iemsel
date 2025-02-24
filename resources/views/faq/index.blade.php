@@ -2,15 +2,12 @@
     <h1 class="faqs">Frequently Asked Questions</h1>
     <hr>
     <section class="faqs starbg">
-        <details class="faq_item">
-            <summary class="faq_title">How can you print a document from your laptop at HZ?</summary>
-            <p class="faq_content">You go to <a href="https://print.hz.nl" target="_blank" rel="noopener noreferrer">print hz</a> and follow the instructions there.</p>
-        </details>
-
         @foreach($faqs as $faq)
             <x-faq.faq-item :faq="$faq"></x-faq.faq-item>
         @endforeach
+        <hr>
             <a href="{{ route('faq.create') }}" class="button is-primary">Create a New FAQ</a>
+        <hr>
     </section>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
